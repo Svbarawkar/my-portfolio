@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Developer Portfolio</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+</head>
+<body>
+  <header class="hero">
+    <div class="container">
+      <img src="C:\Users\amolb\OneDrive\Desktop\PORTFOLIO\ProfilePicture.jpg" alt="Snehal Barawkar" class="profile-pic">
+      <h1>Hi, I'm Snehal Barawkar</h1>
+      <p style="font-weight: bold; color: #333;">Android and Java Full Stack Web Developer</p>
+      <a href="#contact" class="cta">Contact Me</a>
+    </div>
+  </header>
+  <nav>
+    <ul>
+      <li><a href="#about">About Me</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+  <section id="about" class="about">
+    <div class="container">
+      <h2>About Me</h2>
+      <p>I am a highly skilled freelancer with expertise in Android app development using Firebase and Spring Boot. I specialize in building robust and scalable web applications using Spring Boot, MySQL, HTML, CSS, JavaScript, Bootstrap, and ReactJS. With extensive experience in leveraging all Firebase features, I create dynamic and secure applications that meet client requirements. My passion lies in delivering high-quality solutions, whether it's an Android app or a full-stack web application.</p>
+    </div>
+  </section>
+  <section id="skills" class="skills">
+    <div class="container">
+      <h2>Skills</h2>
+      <ul>
+        <li>Android Development (Java, Firebase/Spring Boot)</li>
+        <li>ReactJS</li>
+        <li>HTML, CSS, JavaScript & Bootstrap</li>
+        <li>Spring Boot</li>
+        <li>MySQL</li>
+        <li>Firebase - Authentication, Realtime Database & Cloud Storage</li>
+        <li>Google Pay Payment API Integration</li>
+      </ul>
+    </div>
+  </section>
+  <section id="projects" class="projects">
+    <div class="container">
+      <h2>Projects</h2>
+      <div class="project-item">
+        <h3>ShaadiDepo.com</h3>
+        <p>A live Android app for matrimonial services, developed using Java and Firebase. Features include user registration, login, profile creation, CRUD operations, match lists, and QR-based payment processing using Google Pay. Firebase Authentication ensures secure user access, Firebase Realtime Database manages data efficiently, and Firebase Cloud Storage handles file uploads. The app is built with a minimum SDK of API 24 (Android 7.0 Nougat). A custom logo was also designed for this project.</p>
+        <a href="https://drive.google.com/file/d/1eV8esA94q-Jp6FMyQig2v75bhJ2As4d9/view?usp=drive_link" class="btn">View Project</a>
+      </div>
+      <div class="project-item">
+        <h3>Falahaar - Online Fruit Shop</h3>
+        <p>An e-commerce prototype for fresh fruit sales, developed using HTML, CSS, and JavaScript. The website focuses on a user-friendly interface, enabling customers to browse, select, and purchase fruits with ease.</p>
+        <a href="https://drive.google.com/file/d/1k-eTAa6b3EyzmZghHrKZfUdUK2Iwegmb/view?usp=drive_link" class="btn">View Project</a>
+      </div>
+      <div class="project-item">
+        <h3>LightBook Project</h3>
+        <p>A beautifully designed login and registration page created using HTML and CSS, with the design conceptualized in Figma. The project showcases a modern and user-friendly interface, reflecting the essence of LightBook. The design focuses on simplicity, accessibility, and responsiveness for an optimal user experience.</p>
+        <a href="https://drive.google.com/file/d/1luGF6wd3IPqouUilfUbgbPw91hJQ_9VL/view?usp=drive_link" class="btn">View Project</a>
+      </div>
+      <div class="project-item">
+        <h3>To-Do Application</h3>
+        <p>A comprehensive to-do application built using ReactJS with TypeScript for the frontend and Spring Boot for the backend. Integrated with a MySQL database, the app supports adding, editing, deleting, marking tasks as complete/incomplete, and searching. Third-party authentication is implemented using Firebase, and the application is containerized with Docker Compose for easy deployment.</p>
+        <a href="https://drive.google.com/file/d/1vg8pRIs0lDujsi0Hf2efJrnnGrwUqnTe/view?usp=drive_link" class="btn">View Project</a>
+      </div>
+      <div class="project-item">
+        <h3>ResponseGenie</h3>
+        <p>An intelligent customer support chatbot designed with ReactJS, TypeScript, Spring Boot, and Google AI. The app provides context-aware responses to customer inquiries, ensuring seamless user support. It is a work in progress.</p>
+        <a href="#" class="btn">View Project</a>
+      </div>
+    </div>
+  </section>
+  <section id="contact" class="contact">
+    <div class="container">
+      <h2>Contact Me</h2>
+      <form id="form" method="POST">
+        <input id="from_name" type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+        <button id="button" type="submit">Send</button>
+      </form>
+    </div>
+  </section>
+  <footer>
+    <p>© 2025 Snehal Barawkar. All Rights Reserved.</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script>
+    emailjs.init('zSNexXEhsS2TUZApH');
+
+    document.getElementById('form').addEventListener('submit', function(event) {
+      event.preventDefault();
+
+      const btn = document.getElementById('button');
+      btn.textContent = 'Sending...';
+
+      const serviceID = 'default_service';
+      const templateID = 'template_zsphzxb';
+
+      emailjs.sendForm(serviceID, templateID, this).then(() => {
+        btn.textContent = 'Send';
+        alert('Email sent successfully!');
+      }, (err) => {
+        btn.textContent = 'Send';
+        alert(`Failed to send email. Error: ${JSON.stringify(err)}`);
+      });
+    });
+  </script>
+</body>
+</html>

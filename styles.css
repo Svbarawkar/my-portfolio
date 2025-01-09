@@ -1,0 +1,172 @@
+/* Reset and base styling */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    box-sizing: inherit;
+  }
+  
+  .profile-pic {
+    width: 150px; /* Adjust size as needed */
+    height: 150px;
+    border-radius: 50%; /* Makes the image circular */
+    object-fit: cover; /* Ensures the image covers the area without distortion */
+    margin-bottom: 10px; /* Adds spacing below the image */
+    border: 3px solid #333; /* Optional: Adds a border around the image */
+    display: block;
+    margin-left: auto;
+    margin-right: auto; /* Centers the image */
+  }
+  
+  /* Hero Section */
+  .hero {
+    background: linear-gradient(to right, #ffafbd, #ffc3a0);
+    color: #fff;
+    text-align: center;
+    padding: 50px 20px;
+  }
+  
+  /* Navigation bar */
+  nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 10px;
+    margin: 0;
+    background: #333;
+  }
+  
+  nav ul li {
+    margin: 0 15px;
+  }
+  
+  nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+  }
+  
+  nav ul li a:hover {
+    color: #ffc3a0;
+  }
+  
+  /* General container styling */
+  .container {
+    max-width: 900px;
+    margin: auto;
+    padding: 20px;
+  }
+  
+  /* Skills section */
+  .skills ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .skills ul li {
+    background: #f4f4f4;
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  
+  /* Projects section */
+  .projects .project-item {
+    margin-bottom: 20px;
+  }
+  
+  .projects .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #333;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s ease, transform 0.2s ease;
+  }
+  
+  .projects .btn:hover {
+    background: #555;
+    transform: scale(1.05);
+  }
+  
+  .projects .btn:active {
+    transform: scale(1);
+  }
+  
+  /* Contact form styling */
+.contact {
+    max-width: 900px; /* Matches the width of the .container */
+    margin: auto; /* Centers the section */
+    padding: 20px; /* Adds spacing */
+  }
+  
+  .contact form {
+    display: flex;
+    flex-direction: column;
+    background: #f9f9f9;
+    padding: 20px;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 100%; /* Inherits the width from the parent container */
+  }
+  
+  .contact form input,
+  .contact form textarea {
+    margin: 10px 0;
+    padding: 10px 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-family: 'Arial', sans-serif;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .contact form input:focus,
+  .contact form textarea:focus {
+    border-color: #333;
+    box-shadow: 0 0 5px rgba(3, 3, 3, 0.5);
+    outline: none;
+  }
+  
+  .contact form button {
+    background: #333;
+    color: #fff;
+    font-size: 1.1rem;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+  }
+  
+  .contact form button:hover {
+    background: #555;
+    transform: scale(1.05);
+  }
+  
+  .contact form button:active {
+    background: #777;
+    transform: scale(1);
+  }
+  
+  
+  /* Footer styling */
+  footer {
+    text-align: center;
+    padding: 10px;
+    background: #333;
+    color: #fff;
+    font-size: 0.9rem;
+  }
+  
